@@ -1,13 +1,9 @@
-import java.util.Stack;
+
+import java.awt.image.RescaleOp;
+import java.util.ArrayList;
+import java.util.List;
 
 
-// import java.util.Scanner;
-// import java.util.Vector;
-// class program 
-// {
-//     //     System.out.println(calculateTip(100.0,0.20));
-//     // }
-//     // public static double calculateTip(double billAmount, double tipPercentage) {
 //     //     double sum = billAmount * tipPercentage;
 //     //     return sum;
 //     // }
@@ -44,66 +40,44 @@ import java.util.Stack;
 //     }
 // }
 
-public class program {
 
-    public static boolean  validparanthesis(String s,int i, Stack<Character> stack) 
+
+
+public class program 
+{
+    public static Integer Binary()
     {
-      
-         if (i == s.length() && stack.size() != 0)
+       
+        int num = 43261596;
+        int remainder = 0;
+        int digit = num;
+        int res = 0;
+        int i = 1;
+        while (i <= 32)
         {
-            return false;
-        }
-
-         if (i == s.length() && stack.isEmpty())
-        {
-            return true;
-        }
-        else if (stack.size() == 0)
-        {
-             stack.push(s.charAt(i));
-             i++;
-             return  validparanthesis(s , i, stack);
+            remainder = digit % 2;
+            System.out.print(remainder);
+            res = res * 2 + remainder;
+            digit = digit / 2;
+            i++;
         }
         
-       
-       
-       
-
-        if( '(' == stack.peek() && ')' == s.charAt(i) )
-        {
-            stack.pop();
-            i++;
-        }
-        else if ('{' == stack.peek() && '}' == s.charAt(i))
-         {
-             stack.pop();
-             i++;
-         }
-        else if ('[' == stack.peek() && ']' == s.charAt(i))
-        {
-            stack.pop();
-            i++;
-        }
-        else
-        {
-            stack.push(s.charAt(i));
-             i++; 
-        }      
-         
-
-      
-        return  validparanthesis(s , i, stack);
     
 
+        return res;
     }
-    
-    public static void main(String[] args) {
-        String s = "([)]";
-        int i = 0;
-      
-        Stack<Character> stack = new Stack<>();
-       boolean res = validparanthesis(s,i,stack);
+
+
+    public static void main(String[] args) 
+    {
+     
+        int res = Binary();
+    System.out.println();
         System.out.println(res);
+
+
+
+        
     }
 
 }
