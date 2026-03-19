@@ -18,7 +18,7 @@ public class validparanthesis
 
       
         int mark = 0;
-        if (stack.size() == 0) 
+        if (stack.isEmpty()) 
         {
             stack.push(s.charAt(i));
             mark = 1;
@@ -42,7 +42,7 @@ public class validparanthesis
             mark = 1;
         }
 
-        if (stack.size() != 0 && mark == 0)
+        if (!(stack.isEmpty()) && mark == 0)
         {
             stack.push(s.charAt(i));
         }
