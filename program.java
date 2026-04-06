@@ -1,11 +1,4 @@
 
-import java.awt.image.RescaleOp;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.text.Position;
-
-
-//     //     double sum = billAmount * tipPercentage;
 //     //     return sum;
 //     // }
 //     public static void main(String[] args) 
@@ -44,16 +37,24 @@ import javax.swing.text.Position;
 
 
 
+
+   
+
+
 public class program 
 {
-    
+
+   
+   
    
 
     public static void main(String[] args) 
     {
-     
-     
 
+        char[] s = {'H','a','n','n','a','h'};
+        
+        System.out.println();
+     
     }
 
 }

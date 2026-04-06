@@ -7,7 +7,7 @@ public class validparanthesis
     public static boolean valid()
     {
 
-        String s = "{([])}";
+        String s = "((({{{)))}}}";
      
     Stack<Character> stack = new Stack<>();
 
@@ -27,19 +27,24 @@ public class validparanthesis
 
         if ('(' == stack.peek() && ')' == s.charAt(i))
         {
+
             stack.pop();
             mark = 1;
+
         }
         else if ('{' == stack.peek() && '}' == s.charAt(i)) 
         {
+
             stack.pop();
             mark = 1;
+
         } 
         else if ('[' == stack.peek() && ']' == s.charAt(i)) 
         {
 
             stack.pop();
             mark = 1;
+
         }
 
         if (!(stack.isEmpty()) && mark == 0)

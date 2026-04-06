@@ -27,6 +27,7 @@ public class stocksprofit
             }
            
             sell = array[j];
+            
             if (sell - buy > profit)
             {
                 profit = sell - buy;
